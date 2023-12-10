@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="stylesheet" href="certificate.css">
+</head>
+<body>
+  <div class="certificate-container">
+    <img src="/icons/favicon.ico"  alt="Certificate Thumbnail" class="certificate-thumbnail">
+    <h1>Certificate of Reference</h1>
+    <hr>
+    <p><strong>Recipient Address:</strong> <span id="viewRecipientAddress"></span></p>
+    <p><strong>Recipient Name:</strong> <span id="viewRecipientName"></span></p>
+    <p><strong>Course Name:</strong> <span id="viewCourseName"></span></p>
+    <p><strong>Issued By:</strong> <span id="viewIssuedBy"></span></p>
+    <p><strong>Completion Date:</strong> <span id="viewCompletionDate"></span></p>
+    &nbsp;
+   <center> <button class="rbutton" onclick="downloadCertificate()">Download Certificate</button></center>
+  </div>
+  <h5 class="remove" style="color: rgb(224, 108, 108);">***Download the Certificate Compulsory***</h5>
+  <h4 class="rverify"><a href="/Verify" target="_blank">Click To Verify Certificate</a></h4>
+  <script>
+    const queryParams = new URLSearchParams(window.location.search);
+    document.getElementById('viewRecipientAddress').innerText = queryParams.get('recipientAddress');
+    document.getElementById('viewRecipientName').innerText = queryParams.get('recipientName');
+    document.getElementById('viewCourseName').innerText = queryParams.get('courseName');
+    document.getElementById('viewIssuedBy').innerText = queryParams.get('issuedBy');
+    document.getElementById('viewCompletionDate').innerText = queryParams.get('completionDate');
+    function downloadCertificate() {
+      document.querySelector('.remove').style.display = 'none';
+      document.querySelector('.rverify').style.display='none';
+      document.querySelector('.rbutton').style.display='none';
+      document.body.classList.add('print-content');
+      document.body.classList.add('hide-url');
+      window.print();
+      document.body.classList.remove('print-content', 'hide-url');
+      document.querySelector('.remove').style.display = 'block';
+      document.querySelector('.rverify').style.display='block';
+      document.querySelector('.rbutton').style.display='block';
+    }
+  </script>
+</body>
+</html>
