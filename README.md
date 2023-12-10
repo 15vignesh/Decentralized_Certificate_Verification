@@ -4,7 +4,7 @@ This is Decentralized certificate registration and verification for generating a
 The smart contract is deployed on the Ethereum blockchain. It includes functions for generating and verifying certificates, and it emits events when certificates are issued.
 The contract stores certificate details, including recipient name, course name, issuer, completion date, and whether the certificate has been issued.
  **Back-end:**
-The Express.js server (`Dac.js`) serves static files, such as HTML, CSS, and JavaScript, to the client.
+The Express.js server serves static files, such as HTML, CSS, and JavaScript, to the client.
 It includes routes for the main application page and the verification page.
 **Blockchain Interaction:**
 The Web3 library is used in the front-end to connect to a local Ethereum blockchain node.
