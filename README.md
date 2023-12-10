@@ -19,3 +19,6 @@ Users can also verify the authenticity of a certificate by providing recipient d
 **Certificate Verification:**
 Users or any one can verify that the certificates are valid or not by proving their recipientaddress in verification section.
 This project showcases the integration of blockchain technology for secure and decentralized certificate generation and verification, providing users with a reliable and transparent system for managing certificates.
+**Blockchain**:
+here i have used Ganache(local blockchain).Ganache is utilized as a local blockchain for storing and managing certificate details. Ganache is a personal blockchain that you can run locally for development and testing purposes. It provides a convenient environment for simulating the behavior of a real Ethereum blockchain, allowing developers to deploy and interact with smart contracts in a controlled and secure manner.
+
